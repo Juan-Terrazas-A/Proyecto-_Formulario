@@ -21,7 +21,7 @@
     <aside class="">
       <nav>
         <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path class="heroicon-ui" d="M20 11.46V20a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2v-4h-2v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8.54A4 4 0 0 1 2 8V7a1 1 0 0 1 .1-.45l2-4A1 1 0 0 1 5 2h14a1 1 0 0 1 .9.55l2 4c.06.14.1.3.1.45v1a4 4 0 0 1-2 3.46zM18 12c-1.2 0-2.27-.52-3-1.35a3.99 3.99 0 0 1-6 0A3.99 3.99 0 0 1 6 12v8h3v-4c0-1.1.9-2 2-2h2a2 2 0 0 1 2 2v4h3v-8zm2-4h-4a2 2 0 1 0 4 0zm-6 0h-4a2 2 0 1 0 4 0zM8 8H4a2 2 0 1 0 4 0zm11.38-2l-1-2H5.62l-1 2h14.76z"/></svg>
-          Sobre de </a>
+          Acerca de </a>
         <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path class="heroicon-ui" d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2zm0 10v6h14v-6h-2.38l-1.45 2.9a2 2 0 0 1-1.79 1.1h-2.76a2 2 0 0 1-1.8-1.1L7.39 13H5zm14-2V5H5v6h2.38a2 2 0 0 1 1.8 1.1l1.44 2.9h2.76l1.45-2.9a2 2 0 0 1 1.79-1.1H19z"/></svg>
           Ayuda</a>
       </nav>
@@ -30,12 +30,12 @@
     <div class="cuerpo">
         <p>
 
-          <h2>Formulario</h2>
+          <h2>Formulario de Inscripcion</h2>
           <div class="formulario">
             <div class="slide">
 
               <div class="item">
-                <h3>Información personal</h3>
+                <h3>Información General</h3>
                 <div class="campos">
                   <aside>
                     <a href="#">
@@ -66,7 +66,7 @@
                         <input type="tel" minlength="10" maxlength="14" id="tel"/>
                       </div>
                       <div class="campo">
-                        <label for="correo">Correo</label>
+                        <label for="correo">Correo Electronico</label>
                         <input required type="email" min="0" id="email"/>
                       </div>
                     </div>
@@ -84,8 +84,9 @@
 
                     <div class="doble">
                       <div class="campo">
-                        <label for="peso">Puesto</label>
+                        <label for="peso">Tipo de visitante:</label>
                         <select id="Position" name="Position">
+                            <option selected placeholder="Pulsa para desplegar"></option>
                             <option value="option1">-- Expositor --</option>
                             <option value="option2">-- Visitante --</option>
                             <option value="option3">-- Invitado especial --</option>
@@ -93,12 +94,52 @@
                         
                       </div>
 
+                      <div class="campo">
+                        <label for="peso">Genero:</label>
+                        <select id="Position" name="Position">
+                            <option selected placeholder="Pulsa para desplegar"></option>
+                            <option value="option1">-- Masculino --</option>
+                            <option value="option2">-- Femenino --</option>
+                            <option value="option3">-- No especificar --</option>
+                        </select><br>
+                        
+                      </div>
 
                     </div>
                     <br>
+                    <div class="doble">
+                      <div class="campo">
+                        <label for="apellido">Calle*</label>
+                        <input required type="text" id="calle"/>
+                      </div>
+                      <div class="campo">
+                        <label for="nombre">Colonia*</label>
+                        <input required type="text" id="colonia"/>
+                      </div>
+                    </div>
 
-                    <span class="label">Adjuntar foto</span>
-                    <input type="file" value="Seleccionar foto" id="file" class="custom-file-input">
+                    <div class="doble">
+                      <div class="campo">
+                        <label for="apellido">Numero Interior</label>
+                        <input  type="text" id="numeroInt"/>
+                      </div>
+                      <div class="campo">
+                        <label for="nombre">Numero Exterior</label>
+                        <input  type="text" id="numeroExt"/>
+                      </div>
+                    </div>
+
+                    <div class="doble">
+                      <div class="campo">
+                        <label for="apellido">Codigo Postal*</label>
+                        <input required type="text" id="cp"/>
+                      </div>
+                      <div class="campo">
+                        <label for="nombre">Ciudad*</label>
+                        <input required type="text" id="ciudad"/>
+                      </div>
+                    </div>
+                    
                     <div class="clear_r">
                       <input id="continuar" type="submit" class="boton_ok" value="Continuar">
                     </div>
@@ -228,7 +269,7 @@
                             <table class="horario">
                               <tr>
                                 <th>Lunes</th>
-                                <th>MArtes</th>
+                                <th>Martes</th>
                                 <th>Miércoles</th>
                                 <th>Jueves</th>
                                 <th>Viernes</th>
