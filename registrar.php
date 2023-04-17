@@ -18,7 +18,7 @@ $consulta = "INSERT INTO asistentes(nombre, clave_tel_pais, telefono, email, emp
 
 $resultado = mysqli_query($conex,$consulta);
 if ($resultado) {
-	header("Location: http://localhost/rg/index(1).html");
+	header("Location: http://localhost/pf/registrado.html");
 	mysqli_close($conex);
 	//<h3 class="ok">¡Te has inscripto correctamente!</h3>
            
