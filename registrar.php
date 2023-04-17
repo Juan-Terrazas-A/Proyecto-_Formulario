@@ -3,22 +3,18 @@
 include("con_db.php");
 
 $nombre = trim($_POST['nombre']);
-$apellido = trim($_POST['apellido']);
+$email=trim($_POST['email']);
+$clave_tel_pais = trim($_POST['clave_tel_pais']);
 $telefono=trim($_POST['telefono']);
-$correo=trim($_POST['correo']);
-$compania=trim($_POST['compania']);
+$empresa=trim($_POST['empresa']);
 $puesto=trim($_POST['puesto']);
-$genero=trim($_POST['genero']);
-$calle=trim($_POST['calle']);
-$colonia=trim($_POST['colonia']);
-$numeroInt=trim($_POST['numeroInt']);
-$numeroExt=trim($_POST['numeroExt']);
-$cp=trim($_POST['cp']);
-$ciudad=trim($_POST['ciudad']);
+$tipo_empresa=trim($_POST['tipo_empresa']);
+$observaciones=trim($_POST['observaciones']);
+
 
 //echo $name," ".$email;
 
-$consulta = "INSERT INTO usuarios(nombre, apellido, telefono, correo, compañia, puesto, genero, calle, colonia, num_interior, num_exterior, codigo_postal, ciudad ) VALUES ('$nombre','$apellido', '$telefono','$correo','$compania','$puesto', '$genero', $calle','$colonia','$numeroInt','$numeroExt','$cp','$ciudad')";
+$consulta = "INSERT INTO asistentes(nombre, clave_tel_pais, telefono, email, empresa, puesto, tipo_empresa, observaciones) VALUES ('$nombre','$clave_tel_pais', '$telefono','$email','$empresa','$puesto', '$tipo_empresa', '$observaciones')";
 
 $resultado = mysqli_query($conex,$consulta);
 if ($resultado) {

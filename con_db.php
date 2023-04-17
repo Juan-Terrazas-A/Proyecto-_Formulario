@@ -3,7 +3,7 @@
 $servername = "localhost";
 $database = "septimo_encuentro";
 $username = "root";
-$password = "Overcooked#1";
+$password = "Overcooked#727";
 // Create connection
 $conex = mysqli_connect($servername, $username, $password, $database);
 /*// Check connection

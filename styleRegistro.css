@@ -107,40 +107,7 @@ body {
     align-items: center;
     padding:1em;
   }
-  header#cab nav a {
-    color:white;
-    fill:#ffffffcf;
-    padding: 0 .5em;
-  }
-  
-  aside {
-      width: 20%
-  }
-  aside nav {
-      padding: 2em 0;
-  }
-  aside nav a {
-        display: flex;
-        padding: .5em 0 .5em .8em;
-        color: #6f6f6f;
-        font-weight: 600;
-        fill: #737373;
-        align-items: center;
-  }
-  aside nav a:hover, aside nav a:focus {
-      background: white;
-      fill: #1394c9;
-      color: #484848;
-  }
-  aside nav a.activo {
-    background: white;
-    fill: #1394c9;
-    color: #484848;
-    box-shadow: 0.3em 0 inset #1394c9;
-  }
-  aside nav a svg {
-      margin-right: .8em;
-  }
+
   
   .cuerpo {
     padding: 1em 1.5em;
@@ -268,8 +235,13 @@ body {
       /* justify-content: space-between; */
       width: 100%;
   }
+
+.doble-int{
+  display: flex;
+}
+
   form .doble .campo:first-child {
-    margin-right:2em;
+    margin-right:1em;
   }
   form span {
       font-size: 0.9em;
@@ -280,7 +252,13 @@ body {
       background: #f7f9fd;
       padding: .7em 1.1em;
       margin-bottom:1em;
+      width: 20em;
   }
+
+  .input-tel{
+    width: 13em;
+  }
+
   input:hover {
       border-color: #aeaeae;
   }
@@ -580,3 +558,279 @@ body {
       font-size: 0.8em;
       color: #6f6d74;
   }
+
+  *{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+img{
+    max-width: 100%;
+}
+
+
+/* nav */
+.imgLogo{
+    width: 170px;
+    height: 75px;
+}
+
+nav{
+    display: flex;
+    background-color: #1394c9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 30px 30px 30px rgba(0.3, 0.3, 0.3, 0.3); /* Establece un borde sombreado en la imagen de fondo */
+    /* background-image: url(../img/7mo.png); */
+    /* background-size: ;
+    background-position: ; */
+}
+
+.menu{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+nav .menu div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-nav{
+    display: flex;
+    flex-direction: row;
+    text-align: end;
+    height: 60px;
+    margin-left: 0px;
+    
+}
+
+.cont-link{
+
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 6px;
+    font-weight: bold;
+    color: white;
+
+    margin-right: 20px ;
+    padding: 20px;
+}
+
+
+.cont-link a{
+
+    margin-right: 5px ;
+    text-decoration: none;
+    color: white;
+}
+
+.cont-link i{
+
+    color: white;
+}
+
+.cont-link-sus{
+
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 6px;
+    font-weight: bold;
+    background-color: rgba(143, 33, 33, 0.637);
+    color: white;
+    margin-top: -10px;
+    margin-right: 20px ;
+    padding: 40px;
+    
+}
+
+
+.cont-link-sus a{
+
+    margin-right: 5px ;
+    text-decoration: none;
+    color: white;
+}
+
+.cont-link-sus i{
+
+    color: white;
+    margin-top: -35px;
+}
+
+.link-index{
+
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.link-contacto{
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: aliceblue;
+}
+.link-suscribirse{
+
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.link-login{
+    
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.link-registro{
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: aliceblue;
+    text-decoration: none;
+    margin-right: 20px;
+
+
+    
+    margin-right: 20px;
+}
+
+.Separacion{
+    background-color: white;
+}
+/* img Fondo */
+
+.fondo{
+    margin-top: 50px;
+    display: flex;
+    background-image:url(../img/find3.jpeg); 
+    background-size: cover ;
+    background-position: center calc(50% + 10px); /* Ajusta la posición de la imagen de fondo */
+    text-align: center;
+    color: white;
+    justify-content: center;
+    height: 500px; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+    box-shadow: 30px 30px 30px rgba(0.3, 0.3, 0.3, 0.3); /* Establece un borde sombreado en la imagen de fondo */
+}
+
+
+.boton {
+    display: inline-block;
+    background-color: #1394c9;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.letrasFondo h1{
+    margin-top: 270px;
+
+    letter-spacing: 2px;
+    font-size: 74px;
+}
+
+.letrasFondo h2{
+
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    letter-spacing: 2px;
+}
+
+
+/* sup */
+
+.sup{
+    margin-top: -10px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.sup-cuadros{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 332px; /* El valor "auto" centra el div horizontalmente */
+    text-align: center; /* Centra el contenido dentro del div */
+    padding: 20px;
+}
+
+.cuadros {
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: #1394c9;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #737f834f;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+
+    transition: background-color 0.3s, color 0.3s; /* Agregamos transiciones para suavizar el cambio de colores */
+
+}
+
+.cuadros a {
+    color: #052735ad;
+    text-decoration: none;
+}
+.cuadros i {
+    color: #1394c9;
+    font-size: 3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.cuadros:hover{
+    background-color: #1394c9;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cuadros:hover i{
+    color: #fff;
+}
+
+.cuadros:hover a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: black;
+}

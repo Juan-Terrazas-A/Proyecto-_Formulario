@@ -6,23 +6,42 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Document</title>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-      <link rel="stylesheet" type="text/css" href="styleRegistro.css">
+      <link rel="stylesheet" href="styleRegistro.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   </head>
-  <header id="cab">
-      <div class="maxw">
-        <h1>EmpresaX</h1>
-        <nav>
-          <!-- nav -->
-        </nav>
-      </div>
-  </header>
  <body>
-    <div class="maxw content" style="justify-content: center;">
+    <nav style="display: flex; background-color: #1394c9; position: fixed; top: 0; left: 0; width: 100%; padding: 10px; box-shadow: 30px 30px 30px rgb(255, 255, 255); ">
+      <div style="width: 170px; height: 75px;">
+          <img src="7mo.png" alt="frame" style="width: 170px; height: 75px;">
+      </div>
+      <a href="tel:+"></a>      
+
+      <div class="menu-nav" style="display: flex; flex-direction: row; text-align: end; height: 60px; margin-left: 800px;">
+
+        <!-- <a href="#" class="link-search"><i class="fa-solid fa-magnifying-glass"></i></a> -->
+
+        <div style="text-transform: uppercase;font-size: 15px;letter-spacing: 6px;font-weight: bold;color: white;margin-right: 20px ;padding: 20px;">
+            <a style="color: whitesmoke;" href="" ><i class="fa-solid fa-user"></i>Asistente</a>
+        </div>
+
+        <div style="text-transform: uppercase;font-size: 15px;letter-spacing: 6px;font-weight: bold;color: white;margin-right: 20px ;padding: 20px;">
+            <a style="color: whitesmoke;" href="" > <i class="fa-solid fa-bullhorn"></i> Expositor</a>
+        </div>
+      
+          <!-- <a href="registro.html" class="link-registro">Registro</a> -->
+
+      </div>
+    </nav>
+
+    <div class="maxw content" style="justify-content: center; margin-top: 7%;">
 
       <div class="cuerpo">
         <p>
 
-          <h2>Formulario de Inscripcion</h2>
+          <h2>Formulario de Registro de Asistentes</h2>
           <div class="formulario">
             <div class="slide">
               <div class="item">
@@ -36,91 +55,67 @@
                       </div>
 
                       <div class="campo">
-                        <label for="apellido">Apellido*</label>
-                        <input required type="text" name="apellido"/>
-                      </div>
-                    </div>
-                  
-                    <div class="doble">
-                      <div class="campo">
-                        <label for="telefono">Telefono</label>
-                        <input required type="text" name="telefono"/>
-                      </div>
-
-                      <div class="campo">
-                        <label for="correo">Correo Electronico</label>
-                        <input required type="text" name="correo"/>
+                        <label for="correo">Correo Electrónico</label>
+                        <input required type="text" name="Email"/>
                       </div>
                     </div>
 
-                    <div class="doble">
-                    <div class="campo">
-                      <label for="compania">Compañia </label>
-                      <input required type="text" name="compania"/>
-                    </div>
-                    <div class="campo">
-                      <label for="puesto">Puesto</label>
-                      <input type="text"  name="puesto"/>
-                    </div>
+                    <div class="doble" style="display: flex;">
+                      <div class="doble-int" style="display: flex;">
+                        <div class="campo" >
+                          <label for="peso">Código de País</label>
+                          <select class="form-select" aria-label="Default select example" name="clave_tel_pais">
+                              <option selected placeholder="Pulsa para desplegar"></option>
+                              <option value="+52">+52</option>
+                              <option value="123">123</option>
+                              <option value="123">123</option>
+                          </select>
+                        </div>
+                        
+                        <div class="campo">
+                          <label for="telefono">Teléfono</label>
+                          <input class="input-tel" required type="text" name="telefono"/>
+                        </div>
+                      </div>
+
+                      <div class="campo" style="margin-left: 1em;">
+                        <label for="puesto">Puesto</label>
+                        <input  type="text"  name="puesto"/>
+                      </div>
                     </div>
 
                     <div class="doble">
-                    <div class="campo">
-                      <label for="peso">Tipo de visitante:</label>
-                      <select class="form-select" aria-label="Default select example">
-                          <option selected placeholder="Pulsa para desplegar"></option>
-                          <option value="option1">-- Expositor --</option>
-                          <option value="option2">-- Visitante --</option>
-                          <option value="option3">-- Invitado especial --</option>
-                      </select><br>
+                      <div class="campo" style="width:320px ;">
+                        <label for="peso">Tipo Empresa</label>
+                        <select class="form-select" aria-label="Default select example" name="tipo_empresa">
+                            <option selected placeholder="Pulsa para desplegar"></option>
+                            <option value="Maquiladora">Maquiladora</option>
+                            <option value="Proveedor">Proveedor</option>
+                            <option value="Cámara">Cámara / Organismo</option>
+                            <option value="Gobierno">Gobierno</option>
+                            <option value="Academia / Escuela">Academia / Escuela</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                      </div>
+
+                      <div class="campo" >
+                        <label for="compania">Empresa </label>
+                        <input required type="text" name="empresa"/>
+                      </div>
                     </div>
 
-                    <div class="campo">
-                      <label for="peso">Genero:</label>
-                      <select class="form-select" aria-label="Default select example" name="genero">
-                          <option selected placeholder="Pulsa para desplegar"></option>
-                          <option value="option1">-- Masculino --</option>
-                          <option value="option2">-- Femenino --</option>
-                          <option value="option3">-- No especificar --</option>
-                      </select><br>
-                    </div>
+                    
+
+                    <div class="doble">
+
+                        <div class="campo">
+                          <label for="correo">Observaciones</label>
+                          <input required type="text" name="observaciones" style="width: 300%;"/>
+                        </div>
                     </div>
                     <br>
-                    <div class="doble">
-                      <div class="campo">
-                        <label for="apellido">Calle*</label>
-                        <input required type="text" name="calle"/>
-                      </div>
-                      <div class="campo">
-                        <label for="nombre">Colonia*</label>
-                        <input required type="text" name="colonia"/>
-                      </div>
-                    </div>
-
-                    <div class="doble">
-                      <div class="campo">
-                        <label for="apellido">Numero Interior</label>
-                        <input  type="text" name="numeroInt"/>
-                      </div>
-                      <div class="campo">
-                        <label for="nombre">Numero Exterior</label>
-                        <input  type="text" name="numeroExt"/>
-                      </div>
-                    </div>
-
-                    <div class="doble">
-                      <div class="campo">
-                        <label for="apellido">Codigo Postal*</label>
-                        <input required type="text" name="cp"/>
-                      </div>
-                      <div class="campo">
-                        <label for="nombre">Ciudad*</label>
-                        <input required type="text" name="ciudad"/>
-                      </div>
-                    </div>
-
                     <div >
-                      <input id="continuar" type="submit" class="boton_ok" value="Continuar">
+                      <input id="continuar" type="submit" class="boton_ok" value="Registrar">
                     </div>
                   </form>
                 </div>
@@ -130,5 +125,7 @@
         </p>
       </div>
     </div>
+
+    <script src="https://kit.fontawesome.com/bf09ab058c.js" crossorigin="anonymous"></script>
   </body>
 </html>
