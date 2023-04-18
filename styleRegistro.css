@@ -581,7 +581,6 @@ img{
 nav{
     display: flex;
     background-color: #1394c9;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -849,4 +848,12 @@ a{
   margin-left:40%;
   
 
+}
+
+.tipoVisitante:hover {
+  font-size:22px;
+}
+
+.g{
+  margin-top: 25px;
 }
