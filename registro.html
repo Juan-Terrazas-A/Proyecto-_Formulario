@@ -57,7 +57,7 @@
 
                       <div class="campo">
                         <label for="correo">Correo Electrónico</label>
-                        <input required type="text" name="Email"/>
+                        <input required type="text" name="email"/>
                       </div>
                     </div>
 
@@ -115,18 +115,20 @@
                           overflow: auto;"></textarea>
 
                           <label id="label-servicios">Servicio(s) o Producto(s) que ofrece tu empresa</label>
-                          <textarea rows="3" cols="87" required type="text" id="servicios" style="resize: vertical;
+                          <textarea rows="3" cols="87" type="text" name="servicios" id="servicios" style="resize: vertical;
                           overflow: auto;"></textarea>
 
-                          <label id="label-stands">Numero de stands a reservar</label>
-                          <select class="form-select" aria-label="Default select example" id="stands" style="width: 30%">
+                          <label id="label-stands">Tipo de stand a reservar</label>
+                          <select class="form-select" aria-label="Default select example" name="stands" id="stands" style="width: 30%">
                             <option selected placeholder="Pulsa para desplegar"></option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="Isla">Isla</option>
+                            <option value="3x3">3x3</option>
+                            <option value="6x3">6x3</option>
+                            <option value="6x6">6x6</option>
+
                           </select>
+
+                          <label style="margin-top: 10px;" id="label-personas">¿Cuantas personas habra en el stand?</label>
+                          <input type="text" name="personasXstand" id="personasXstand"/>
                         </div>
                     </div>
                     <br>
@@ -149,12 +151,16 @@
         $('#stands').hide();
         $('#label-servicios').hide();
         $('#label-stands').hide();
+        $('#label-personas').hide();
+        $('personasXstand').hide();
 
         $('#expositor').click(function(){
         $('#servicios').show();
         $('#stands').show();
         $('#label-servicios').show();
         $('#label-stands').show();
+        $('#label-personas').show();
+        $('personasXstand').show();
         $('#mensaje').text('Formulario para Expositores');
         });
 
@@ -163,6 +169,8 @@
           $('#stands').hide();
           $('#label-servicios').hide();
           $('#label-stands').hide();
+          $('#label-personas').hide();
+        $('personasXstand').hide();
           $('#mensaje').text('Formulario para Asistentes');
         });
       });

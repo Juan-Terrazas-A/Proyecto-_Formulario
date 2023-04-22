@@ -585,7 +585,7 @@ nav{
     left: 0;
     width: 100%;
     padding: 10px;
-    box-shadow: 30px 30px 30px rgba(0.3, 0.3, 0.3, 0.3); /* Establece un borde sombreado en la imagen de fondo */
+    /* Establece un borde sombreado en la imagen de fondo */
     /* background-image: url(../img/7mo.png); */
     /* background-size: ;
     background-position: ; */
@@ -851,7 +851,7 @@ a{
 }
 
 .tipoVisitante:hover {
-  font-size:22px;
+  font-size:20px;
 }
 
 .g{
