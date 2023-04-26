@@ -126,7 +126,7 @@ body {
     padding: .7em 1.5em;
     border-width: 2px;
     margin: 1em .2em;
-    border-radius: 100px;
+
     font-weight: 600;
     opacity:1;
     font-size:1rem;
@@ -144,11 +144,24 @@ body {
     cursor:pointer;
   }
   .boton_ok {
-      background: #1394c9;
-      border-color: #1394c9;
-      color: white;
-      text-shadow: 0 2px 4px #00000020;
+      background: #FFC844;
+      color: rgb(0, 0, 0);
+      letter-spacing: 2px;
   }
+
+  .boton_aprobar {
+    background: #FFC844;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-color: #FFC844;
+}
+
+  .div-boton {
+    margin-top: 50px;
+    margin-left: 270px;
+  }
+
   .boton_ok svg {
     fill:white
   }
@@ -580,7 +593,6 @@ img{
 
 nav{
     display: flex;
-    background-color: #1394c9;
     top: 0;
     left: 0;
     width: 100%;
@@ -856,4 +868,14 @@ a{
 
 .g{
   margin-top: 25px;
+}
+
+.campos_obligatorios {
+  color: red;
+  font-weight: bold;
+}
+
+.TODO {
+  font-family: 'Khand', sans-serif;
+  letter-spacing: 1px;
 }

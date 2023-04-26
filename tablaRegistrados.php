@@ -1,18 +1,6 @@
 <?php
 
-$servername = "localhost";
-$database = "septimo_encuentro";
-$username = "root";
-$password = "Overcooked#727";
-// Create connection
-$conex = mysqli_connect($servername, $username, $password, $database);
-
-// Check connection
-// if (!$conex) {
-//     echo "Error en la conexion";
-// }else{
-//     echo "Conexion exitosa";
-// }
+include("con_db.php");
 
 try{
     //Importar una conexion
@@ -79,12 +67,14 @@ function aprobar(){
       <title>Septimo Encuentro - Admin</title>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
       <link rel="stylesheet" type="text/css" href="styleRegistro.css">
+      <link href="https://fonts.googleapis.com/css2?family=Khand&display=swap" rel="stylesheet">
   </head>
   <body>
+  <div class="TODO">
 
-    <nav style="position: fixed; display: flex; background-color: #1394c9; width: 100%; padding: 10px;  ">
+    <nav style="position: fixed; display: flex; background-color: #004F9F; width: 100%; padding: 10px;  ">
       <div style="width: 500px; height: 75px; ">
-          <img src="7mo.png" alt="frame" style="width: 170px; height: 75px;">
+          <img src="img/logoBN.png" alt="frame" style="width: 170px; height: 75px; margin-left: 40px;">
       </div>
       <a href="tel:+"></a>      
     </nav>
@@ -138,7 +128,7 @@ function aprobar(){
                             <td><?php echo $expos['12']; ?></td>
                             <td><?php echo $expos['13']; ?></td>
                             <td><button type="button" class="btn btn-light"><i class="fa-solid fa-pen-to-square"></i></button></td>
-                            <td><button onclick="<?php aprobar() ?>" type="button" class="btn btn-primary">Aprobar</button></td>
+                            <td><button onclick="<?php aprobar() ?>" type="button" class="boton_aprobar">APROBAR</button></td>
                         </tr>
                     <?php
                     }
@@ -202,5 +192,6 @@ function aprobar(){
     
     <script src="https://kit.fontawesome.com/4df35409e9.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
   </body>
 </html>

@@ -11,11 +11,15 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Khand&display=swap" rel="stylesheet">
   </head>
  <body>
-    <nav style="display: flex; background-color: #1394c9; width: 100%; padding: 10px; box-shadow: 30px 30px 30px rgb(255, 255, 255); ">
+  <div class="TODO">
+    <nav style="display: flex; background-color: #004F9F; width: 100%; padding: 10px; box-shadow: 30px 30px 30px rgb(255, 255, 255); ">
       <div style="width: 170px; height: 75px;">
-          <img src="7mo.png" alt="frame" style="width: 170px; height: 75px;">
+          <img src="img/logoBN.png" alt="frame" style="width: 170px; height: 75px; margin-left: 40px;">
       </div>
       <a href="tel:+"></a>      
 
@@ -41,22 +45,22 @@
       <div class="cuerpo">
         <p>
 
-          <h2>Formulario de Registro de Asistentes</h2>
+          <h2>REGISTRO GENERAL</h2>
           <div class="formulario">
             <div class="slide">
               <div class="item">
                 <h3>Información General</h3>
-                <p id="mensaje">Formulario para Asistentes</p>
+                <h5 id="mensaje">Formulario para Asistentes</h5>
                 <div class="campos">
                   <form action="registrar.php" method="post">
                     <div class="doble">
                       <div class="campo">
-                        <label for="nombre">Nombre*</label>
+                        <label for="nombre"><span class="campos_obligatorios">*</span> Nombre Completo</label>
                         <input required type="text" name="nombre"/>
                       </div>
 
                       <div class="campo">
-                        <label for="correo">Correo Electrónico</label>
+                        <label for="correo"><span class="campos_obligatorios">*</span>Correo Electrónico</label>
                         <input required type="text" name="email"/>
                       </div>
                     </div>
@@ -64,31 +68,43 @@
                     <div class="doble" style="display: flex;">
                       <div class="doble-int" style="display: flex;">
                         <div class="campo" >
-                          <label for="peso">Código de País</label>
-                          <select class="form-select" aria-label="Default select example" name="clave_tel_pais">
+                          <label for="peso"><span class="campos_obligatorios">*</span>Código de País</label>
+                          <select required class="form-select" aria-label="Default select example" name="clave_tel_pais">
                               <option selected placeholder="Pulsa para desplegar"></option>
-                              <option value="+52">+52</option>
-                              <option value="123">123</option>
-                              <option value="123">123</option>
+                              <option value="+54">Argentina +54</option>
+                              <option value="+501">Belice +501</option>
+                              <option value="+1">Canadá +1</option>
+                              <option value="+57">Colombia +57</option>
+                              <option value="+506">Costa Rica +506</option>
+                              <option value="+503">El Salvador +503</option>
+                              <option value="+34">España +34</option>
+                              <option value="+1">Estados Unidos +1</option>
+                              <option value="+502">Guatemala +502</option>
+                              <option value="+52" selected>México +52</option>
+                              <option value="+595">Paraguay +595</option>
+                              <option value="+1">Puerto Rico +1</option>
+                              <option value="+598">Uruguay +598</option>
+                              <option value="+58">Venezuela +58</option>
+
                           </select>
                         </div>
                         
                         <div class="campo">
-                          <label for="telefono">Teléfono</label>
-                          <input class="input-tel" required type="text" name="telefono"/>
+                          <label for="telefono"><span class="campos_obligatorios">*</span>Teléfono</label>
+                          <input class="input-tel" required type="text" name="telefono" style="width: 155px;"/>
                         </div>
                       </div>
 
                       <div class="campo" style="margin-left: 1em;">
-                        <label for="puesto">Puesto</label>
-                        <input  type="text"  name="puesto"/>
+                        <label for="puesto"><span class="campos_obligatorios">*</span>Puesto</label>
+                        <input required type="text"  name="puesto"/>
                       </div>
                     </div>
 
                     <div class="doble">
                       <div class="campo" style="width:320px ;">
-                        <label for="peso">Tipo Empresa</label>
-                        <select class="form-select" aria-label="Default select example" name="tipo_empresa">
+                        <label for="peso"><span class="campos_obligatorios">*</span>Tipo Empresa</label>
+                        <select required class="form-select" aria-label="Default select example" name="tipo_empresa">
                             <option selected placeholder="Pulsa para desplegar"></option>
                             <option value="Maquiladora">Maquiladora</option>
                             <option value="Proveedor">Proveedor</option>
@@ -100,8 +116,26 @@
                       </div>
 
                       <div class="campo" >
-                        <label for="compania">Empresa </label>
+                        <label for="compania"><span class="campos_obligatorios">*</span>Empresa </label>
                         <input required type="text" name="empresa"/>
+                      </div>
+                    </div>
+
+                    <div style="display: flex; margin-top: 10px;">
+                      <div>
+                        <label id="label-stands">Tipo de stand a reservar</label>
+                        <select class="form-select" aria-label="Default select example" name="stands" id="stands" style="width: 320px;">
+                          <option selected placeholder="Pulsa para desplegar"></option>
+                          <option value="3x3">3x3</option>
+                          <option value="6x3">6x3</option>
+                          <option value="6x6">6x6 - Isla</option>
+
+                        </select>
+                      </div>
+                      
+                      <div style="margin-left: 1em;">
+                        <label id="label-personas">¿Cuantas personas habra en el stand?</label>
+                        <input type="text" name="personasXstand" id="personasXstand"/>
                       </div>
                     </div>
 
@@ -110,30 +144,19 @@
                     <div class="doble">
 
                         <div class="campo">
-                          <label>Observaciones</label>
+                          <label><span class="campos_obligatorios">*</span>Observaciones</label>
                           <textarea rows="3" cols="87" required type="text" name="observaciones" style="resize: vertical;
-                          overflow: auto;"></textarea>
+                          overflow: auto; width: 660px;"></textarea>
 
                           <label id="label-servicios">Servicio(s) o Producto(s) que ofrece tu empresa</label>
                           <textarea rows="3" cols="87" type="text" name="servicios" id="servicios" style="resize: vertical;
-                          overflow: auto;"></textarea>
+                          overflow: auto; width: 660px;"></textarea>
 
-                          <label id="label-stands">Tipo de stand a reservar</label>
-                          <select class="form-select" aria-label="Default select example" name="stands" id="stands" style="width: 30%">
-                            <option selected placeholder="Pulsa para desplegar"></option>
-                            <option value="3x3">3x3</option>
-                            <option value="6x3">6x3</option>
-                            <option value="6x6">6x6</option>
-
-                          </select>
-
-                          <label style="margin-top: 10px;" id="label-personas">¿Cuantas personas habra en el stand?</label>
-                          <input type="text" name="personasXstand" id="personasXstand"/>
                         </div>
                     </div>
                     <br>
-                    <div >
-                      <input id="continuar" type="submit" class="boton_ok" value="Registrar">
+                    <div class="div-boton">
+                      <input id="continuar" type="submit" class="boton_ok" value="REGISTRAR">
                     </div>
                   </form>
                 </div>
@@ -152,7 +175,7 @@
         $('#label-servicios').hide();
         $('#label-stands').hide();
         $('#label-personas').hide();
-        $('personasXstand').hide();
+        $('#personasXstand').hide();
 
         $('#expositor').click(function(){
         $('#servicios').show();
@@ -160,7 +183,7 @@
         $('#label-servicios').show();
         $('#label-stands').show();
         $('#label-personas').show();
-        $('personasXstand').show();
+        $('#personasXstand').show();
         $('#mensaje').text('Formulario para Expositores');
         });
 
@@ -170,11 +193,13 @@
           $('#label-servicios').hide();
           $('#label-stands').hide();
           $('#label-personas').hide();
-        $('personasXstand').hide();
+          $('#personasXstand').hide();
           $('#mensaje').text('Formulario para Asistentes');
         });
       });
     </script>
     <script src="https://kit.fontawesome.com/bf09ab058c.js" crossorigin="anonymous"></script>
+    <script src="sweetalert.js" ></script>
+    </div>
   </body>
 </html>
